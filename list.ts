@@ -1,6 +1,6 @@
 import { Root } from './scripts/types'
 
-export const List: Root = [
+const List: Root = [
   {
     name: 'Adpro的GKD订阅',
     author: 'Adpro',
@@ -11,10 +11,14 @@ export const List: Root = [
         name: 'gitmirror源（国内）',
         importUrl: 'https://raw.gitmirror.com/Adpro-Team/GKD_subscription/main/dist/Adpro_gkd.json5',
       },
+      {
+        name: 'npmmirror源（国内）',
+        importUrl: 'https://registry.npmmirror.com/@adpro/gkd_subscription/latest/files/dist/Adpro_gkd.json5',
+      },
     ],
     repo: 'Adpro-Team/GKD_subscription',
     branch: 'main',
-    active: true,
+    active: false,
   },
   {
     name: 'AIsouler的GKD订阅',
@@ -23,8 +27,14 @@ export const List: Root = [
     prescribedUpdateUrl: false,
     subUrls: [
       {
-        name: 'gitmirror源（国内）',
-        importUrl: 'https://raw.gitmirror.com/AIsouler/GKD_subscription/main/dist/AIsouler_gkd.json5',
+        name: 'npmmirror源（国内）',
+        importUrl:
+          'https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIsouler_gkd.json5',
+      },
+      {
+        name: 'GitHub源',
+        importUrl:
+          'https://raw.githubusercontent.com/AIsouler/GKD_subscription/main/dist/AIsouler_gkd.json5',
       },
     ],
     repo: 'AIsouler/GKD_subscription',
@@ -61,6 +71,7 @@ export const List: Root = [
   {
     name: '甘霖的GKD订阅',
     author: 'ganlinte',
+    prescribedUpdateUrl: false,
     id: 233,
     subUrls: [
       {
@@ -69,12 +80,7 @@ export const List: Root = [
       },
       {
         name: 'npmmirror源（国内）',
-        defaultUpdateUrl: true,
         importUrl: 'https://registry.npmmirror.com/@ganlinte/gkd-subscription/latest/files',
-      },
-      {
-        name: 'gitmirror源（国内）',
-        importUrl: 'https://raw.gitmirror.com/ganlinte/GKD-subscription/main/dist/ganlin_gkd.json5',
       },
     ],
     repo: 'ganlinte/GKD-subscription',
@@ -82,49 +88,27 @@ export const List: Root = [
     active: true,
   },
   {
-    name: 'Jamison Leo的GKD订阅',
-    author: 'Jamison Leo',
-    id: 1025,
-    subUrls: [
-      {
-        name: 'gitmirror源（国内）',
-        defaultUpdateUrl: true,
-        importUrl: 'https://raw.gitmirror.com/JamisonLeo/GKD-subscription/main/subscription.json',
-      },
-    ],
-    repo: 'JamisonLeo/GKD-subscription',
-    branch: 'main',
-    active: false,
-  },
-  {
-    name: 'YaChengMu的GKD订阅',
-    author: 'YaChengMu',
-    id: 303,
-    subUrls: [
-      {
-        name: 'gitmirror源（国内）',
-        defaultUpdateUrl: true,
-        importUrl: 'https://raw.gitmirror.com/YaChengMu/subscription/main/dist/gkd.json5',
-      },
-    ],
-    repo: 'YaChengMu/subscription',
-    branch: 'main',
-    active: true,
-  },
-  {
     name: '田所浩二的GKD订阅',
     author: 'たどころ こうじ',
+    prescribedUpdateUrl: false,
     id: 114514,
     subUrls: [
       {
         name: 'gitmirror源（国内）',
-        defaultUpdateUrl: true,
         importUrl: 'https://raw.gitmirror.com/gkd-sub-repo/114514_subscription/main/dist/114514_gkd.json5',
+      },
+      {
+        name: 'npmmirror源（国内）（推荐使用）',
+        importUrl: 'https://registry.npmmirror.com/@kunjinkao/gkd-subscription/latest/files/dist/114514_gkd.json5',
+      },
+      {
+        name: 'jsDelivr源',
+        importUrl: 'https://cdn.jsdelivr.net/gh/gkd-sub-repo/114514_subscription@main/dist/114514_gkd.json5',
       },
     ],
     repo: 'gkd-sub-repo/114514_subscription',
     branch: 'main',
-    active: true,
+    active: false,
   },
   {
     name: '梦念逍遥の订阅',
@@ -142,3 +126,5 @@ export const List: Root = [
     active: true,
   },
 ];
+
+export default List;

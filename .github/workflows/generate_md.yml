@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'main'
-      - 'dev'
+      - '**'
 
 jobs:
   generate_readme:
@@ -16,12 +15,18 @@ jobs:
           fetch-depth: 0
 
       - uses: actions/setup-node@v4.0.1
+        with:
+          node-version: 20
+
+      - uses: pnpm/action-setup@v3
+
+      - run: pnpm install
 
       - id: check
-        run: npm run check
+        run: pnpm check
       
       - if: ${{ steps.check.outcome == 'success' }}
-        run: npm run update
+        run: pnpm run update
 
       - name: Git commit
         id: commit
